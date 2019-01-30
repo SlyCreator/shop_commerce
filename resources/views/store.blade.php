@@ -499,7 +499,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- /product -->
+							<!-- /product -->z
 						</div>
 						<!-- /store products -->
 
