@@ -10,8 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () { return view('index');});
+    //Frontend view
+Route::get('/','IndexController@index');
 
 Route::get('/store', function () {return view('store');});
 
