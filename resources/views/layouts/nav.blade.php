@@ -8,11 +8,11 @@
             <ul class="main-nav nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Hot Deals</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Laptops</a></li>
-                <li><a href="#">Smartphones</a></li>
-                <li><a href="#">Cameras</a></li>
-                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Wrist watches</a></li>
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Bespoken shoes</a></li>
+                <li><a href="#">Beauty</a></li>
+                
             </ul>
             <!-- /NAV -->
         </div>

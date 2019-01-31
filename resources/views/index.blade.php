@@ -12,7 +12,7 @@
 						<div class="col-md-4 col-xs-6">
 							<div class="shop">
 								<div class="shop-img">
-									<img src="./img/shop01.png" alt="">
+									<img src="./img/sh1.png" alt="">
 								</div>
 								<div class="shop-body">
 									<h3>Wrist Watch<br>Collection</h3>
@@ -26,7 +26,7 @@
 						<div class="col-md-4 col-xs-6">
 							<div class="shop">
 								<div class="shop-img">
-									<img src="./img/shop03.png" alt="">
+									<img src="./img/sh4.png" alt="">
 								</div>
 								<div class="shop-body">
 									<h3>Accessories<br>Collection</h3>
@@ -40,7 +40,7 @@
 						<div class="col-md-4 col-xs-6">
 							<div class="shop">
 								<div class="shop-img">
-									<img src="./img/shop02.png" alt="">
+									<img src="./img/sh2.png" alt="">
 								</div>
 								<div class="shop-body">
 									<h3>Beauty<br>Collection</h3>
@@ -86,7 +86,7 @@
 									<!-- tab -->
 									<div id="tab1" class="tab-pane active">
 										<div class="products-slick" data-nav="#slick-nav-1">
-												@foreach ($products as $product)
+												@foreach ($rand_products as $product)
 								
 											
 											<!-- product -->
@@ -195,187 +195,104 @@
 					<div class="row">
 						<div class="col-md-4 col-xs-6">
 							<div class="section-title">
-								<h4 class="title">Top selling</h4>
+								<h4 class="title">Top selling Brand</h4>
 								<div class="section-nav">
 									<div id="slick-nav-3" class="products-slick-nav"></div>
 								</div>
 							</div>
 	
 							<div class="products-widget-slick" data-nav="#slick-nav-3">
-								<div>
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product07.png" alt="">
+									<div>
+											@foreach ($col1_products as $col1)
+												
+											
+												<!-- product widget -->
+												<div class="product-widget">
+													<div class="product-img">
+													<img src="./img/{{$col1->image}}" alt="">
+													</div>
+													<div class="product-body">
+														<p class="product-category">Category</p>
+														<h3 class="product-name"><a href="#">{{$col1->p_name}}</a></h3>
+													<h4 class="product-price">{{$col1->p_price}}<del class="product-old-price">$990.00</del></h4>
+													</div>
+												</div>
+												<!-- /product widget -->
+											@endforeach
+			
 										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+			
+										<div>
+												@foreach ($products_desc as $col1)
+												
+											
+												<!-- product widget -->
+												<div class="product-widget">
+													<div class="product-img">
+													<img src="./img/{{$col1->image}}" alt="">
+													</div>
+													<div class="product-body">
+														<p class="product-category">Category</p>
+														<h3 class="product-name"><a href="#">{{$col1->p_name}}</a></h3>
+													<h4 class="product-price">{{$col1->p_price}}<del class="product-old-price">$990.00</del></h4>
+													</div>
+												</div>
+												<!-- /product widget -->
+											@endforeach
+									
 										</div>
-									</div>
-									<!-- /product widget -->
 	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product08.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product09.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- product widget -->
-								</div>
-	
-								<div>
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product01.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product02.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product03.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- product widget -->
-								</div>
 							</div>
 						</div>
 	
 						<div class="col-md-4 col-xs-6">
 							<div class="section-title">
-								<h4 class="title">Top selling</h4>
+								<h4 class="title">Top selling This week</h4>
 								<div class="section-nav">
 									<div id="slick-nav-4" class="products-slick-nav"></div>
 								</div>
 							</div>
 	
 							<div class="products-widget-slick" data-nav="#slick-nav-4">
-								<div>
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product04.png" alt="">
+									<div>
+											@foreach ($products_desc as $col2)
+												
+											
+												<!-- product widget -->
+												<div class="product-widget">
+													<div class="product-img">
+													<img src="./img/{{$col2->image}}" alt="">
+													</div>
+													<div class="product-body">
+														<p class="product-category">Category</p>
+														<h3 class="product-name"><a href="#">{{$col2->p_name}}</a></h3>
+													<h4 class="product-price">{{$col2->p_price}}<del class="product-old-price">$990.00</del></h4>
+													</div>
+												</div>
+												<!-- /product widget -->
+											@endforeach
+			
 										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+			
+										<div>
+												@foreach ($col2_products as $col2)
+												
+											
+												<!-- product widget -->
+												<div class="product-widget">
+													<div class="product-img">
+													<img src="./img/{{$col2->image}}" alt="">
+													</div>
+													<div class="product-body">
+														<p class="product-category">Category</p>
+														<h3 class="product-name"><a href="#">{{$col2->p_name}}</a></h3>
+													<h4 class="product-price">{{$col2->p_price}}<del class="product-old-price">$990.00</del></h4>
+													</div>
+												</div>
+												<!-- /product widget -->
+											@endforeach
+									
 										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product05.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product06.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- product widget -->
-								</div>
-	
-								<div>
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product07.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product08.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product09.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- product widget -->
-								</div>
 							</div>
 						</div>
 	
@@ -383,7 +300,7 @@
 	
 						<div class="col-md-4 col-xs-6">
 							<div class="section-title">
-								<h4 class="title">Top selling</h4>
+								<h4 class="title">Last</h4>
 								<div class="section-nav">
 									<div id="slick-nav-5" class="products-slick-nav"></div>
 								</div>
@@ -391,85 +308,43 @@
 	
 							<div class="products-widget-slick" data-nav="#slick-nav-5">
 								<div>
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product01.png" alt="">
+									@foreach ($col3_products as $col3)
+										
+									
+										<!-- product widget -->
+										<div class="product-widget">
+											<div class="product-img">
+											<img src="./img/{{$col3->image}}" alt="">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Category</p>
+												<h3 class="product-name"><a href="#">{{$col3->p_name}}</a></h3>
+											<h4 class="product-price">{{$col3->p_price}}<del class="product-old-price">$990.00</del></h4>
+											</div>
 										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
+										<!-- /product widget -->
+									@endforeach
 	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product02.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product03.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- product widget -->
 								</div>
 	
 								<div>
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product04.png" alt="">
+										@foreach ($products_asc as $col3)
+										
+									
+										<!-- product widget -->
+										<div class="product-widget">
+											<div class="product-img">
+											<img src="./img/{{$col3->image}}" alt="">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Category</p>
+												<h3 class="product-name"><a href="#">{{$col3->p_name}}</a></h3>
+											<h4 class="product-price">{{$col3->p_price}}<del class="product-old-price">$990.00</del></h4>
+											</div>
 										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product05.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- /product widget -->
-	
-									<!-- product widget -->
-									<div class="product-widget">
-										<div class="product-img">
-											<img src="./img/product06.png" alt="">
-										</div>
-										<div class="product-body">
-											<p class="product-category">Category</p>
-											<h3 class="product-name"><a href="#">product name goes here</a></h3>
-											<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-										</div>
-									</div>
-									<!-- product widget -->
+										<!-- /product widget -->
+									@endforeach
+							
 								</div>
 							</div>
 						</div>
