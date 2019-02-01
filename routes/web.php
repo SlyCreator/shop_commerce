@@ -12,6 +12,7 @@
 */
     //Frontend view
 Route::get('/','IndexController@index');
+Route::get('/wrist-watch','IndexController@listbycategory');
 
 Route::get('/store', function () {return view('store');});
 
@@ -21,3 +22,4 @@ Route::get('/checkout', function () {return view('checkout');});
 
 Route::get('/blank', function () { return view('blank');});
 
+Route::get('/test','IndexController@listbycategory');
