@@ -113,7 +113,7 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-									<h3 class="product-name"><a href="#">{{$product->p_name}}</a></h3>
+									<h3 class="product-name"><a href="{{url('/wrist-watch',$product->id)}}">{{$product->p_name}}</a></h3>
 									<h4 class="product-price">{{$product->p_price}} <del class="product-old-price">{{$product->p_price}}</del></h4>
 										<div class="product-rating">
 											<i class="fa fa-star"></i>
