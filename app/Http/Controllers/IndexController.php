@@ -10,14 +10,14 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index(){
-        $rand_products = Product::inRandomOrder()->take(8)->get();
-        $products_asc  =$this->products_in_asc();
-        $products_desc =$this->products_in_desc();
+        $rand_products = $this->fetch_at_Random(6);
+        $products_asc  =$this->products_in_asc(3);
+        $products_desc =$this->products_in_desc(3);
 
                 /*Random archieve*/
-        $col1_products =$this->threeRandom();
-        $col2_products =$this->threeRandom();
-        $col3_products =$this->threeRandom();
+        $col1_products =$this->fetch_at_Random(3);
+        $col2_products =$this->fetch_at_Random(3);
+        $col3_products =$this->fetch_at_Random(3);
 
       
         return view('index')->with(compact('rand_products','products_desc','products_asc','col1_products','col2_products','col3_products'));
@@ -31,37 +31,28 @@ class IndexController extends Controller
 
     public function productdetail($id){
         $product_detail = Product::findOrFail($id);
-        $rand_products1 = Product::inRandomOrder()->take(2)->get();
-        $rand_products2 = Product::inRandomOrder()->take(2)->get();
+        $rand_products1 = $this->fetch_at_Random(2);
+        $rand_products2 = $this->fetch_at_Random(2);
             //return $product_detail;
             return view('product')->with(compact('product_detail','rand_products1','rand_products2'));
     }
     /*here is actually a function that does same work with random*/
 
-    public function products_in_asc(){
-        $products = Product::orderBy('p_name','asc')->take(3)->get();
+    public function products_in_asc($amount){
+        $products = Product::orderBy('p_name','asc')->take($amount)->get();
         return $products;
     }
 
-    public function products_in_desc(){
-        $products = Product::orderBy('p_name','desc')->take(3)->get();
+    public function products_in_desc($amount){
+        $products = Product::orderBy('p_name','desc')->take($amount)->get();
         return $products;
     }
 
-    public function threeRandom(){
-        $products = Product::inRandomOrder()->take(3)->get();
+    public function fetch_at_Random($amount){
+        $products = Product::inRandomOrder()->take($amount)->get();
         return $products;
     }
-
-    public function twelveRandom(){
-        $products =Product::inRandomOrder()->take(8)->get();
-        return $products;
-    }
-
-
-    
 
    
-    
   
 }
