@@ -105,7 +105,7 @@
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-									<img src="./img/{{$product->image}}" alt="">
+									<img src="/img/{{$product->image}}" alt="">
 										<div class="product-label">
 											<span class="sale">-30%</span>
 											<span class="new">NEW</span>
@@ -113,7 +113,7 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-									<h3 class="product-name"><a href="{{url('/wrist-watch',$product->id)}}">{{$product->p_name}}</a></h3>
+									<h3 class="product-name"><a href="/wrist-watch/{{$product->id}}">{{$product->p_name}}</a></h3>
 									<h4 class="product-price">{{$product->p_price}} <del class="product-old-price">{{$product->p_price}}</del></h4>
 										<div class="product-rating">
 											<i class="fa fa-star"></i>
