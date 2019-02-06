@@ -383,7 +383,9 @@
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-							<img src="/img/{{$product->image}}" alt="">
+						
+							  <img src="/img/{{$product->image}}" alt="">
+
 								<div class="product-label">
 									<span class="sale">-30%</span>
 								</div>
