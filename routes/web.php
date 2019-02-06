@@ -15,6 +15,9 @@ Route::get('/','IndexController@index');
 Route::get('/wrist-watch','IndexController@listbycategory');
 Route::get('/wrist-watch/{id}','IndexController@productdetail');
 
+    //handling Cart
+Route::get('/viewcart','CartController');
+
 Route::get('/store', function () {return view('store');});
 
 Route::get('/product', function () {return view('product');});
