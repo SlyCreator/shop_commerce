@@ -47,7 +47,7 @@
 									<input class="input" type="text" name="address" placeholder="Address">
 								</div>
 								<div class="form-group">
-									<input class="input" type="text" name="city" placeholder="City">
+									<input class="input" type="text" name="state" placeholder="State">
 								</div>
 								<div class="form-group">
 									<input class="input" type="text" name="country" placeholder="Country">
@@ -99,7 +99,7 @@
 											<input class="input" type="text" name="address" placeholder="Address">
 										</div>
 										<div class="form-group">
-											<input class="input" type="text" name="city" placeholder="City">
+											<input class="input" type="text" name="state" placeholder="State">
 										</div>
 										<div class="form-group">
 											<input class="input" type="text" name="country" placeholder="Country">
