@@ -16,7 +16,7 @@
 								</div>
 								<div class="shop-body">
 									<h3>Wrist Watch<br>Collection</h3>
-									<a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+									<a href="/wrist-watch/" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 								</div>
 							</div>
 						</div>
@@ -101,7 +101,7 @@
 												</div>
 												<div class="product-body">
 													<p class="product-category">Category</p>
-													<h3 class="product-name"><a href="#">{{$product->p_name}}</a></h3>
+													<h3 class="product-name"><a href="/wrist-watch/{{$product->id}}">{{$product->p_name}}</a></h3>
 													<h4 class="product-price">{{$product->p_price}}<del class="product-old-price">$990.00</del></h4>
 													<div class="product-rating">
 														<i class="fa fa-star"></i>
@@ -213,7 +213,7 @@
 													</div>
 													<div class="product-body">
 														<p class="product-category">Category</p>
-														<h3 class="product-name"><a href="#">{{$col1->p_name}}</a></h3>
+														<h3 class="product-name"><a href="/wrist-watch/{{$col1->id}}">{{$col1->p_name}}</a></h3>
 													<h4 class="product-price">{{$col1->p_price}}<del class="product-old-price">$990.00</del></h4>
 													</div>
 												</div>
@@ -233,7 +233,7 @@
 													</div>
 													<div class="product-body">
 														<p class="product-category">Category</p>
-														<h3 class="product-name"><a href="#">{{$col1->p_name}}</a></h3>
+														<h3 class="product-name"><a href="/wrist-watch/{{$col1->id}}">{{$col1->p_name}}</a></h3>
 													<h4 class="product-price">{{$col1->p_price}}<del class="product-old-price">$990.00</del></h4>
 													</div>
 												</div>
@@ -265,7 +265,7 @@
 													</div>
 													<div class="product-body">
 														<p class="product-category">Category</p>
-														<h3 class="product-name"><a href="#">{{$col2->p_name}}</a></h3>
+														<h3 class="product-name"><a href="/wrist-watch/{{$col2->id}}">{{$col2->p_name}}</a></h3>
 													<h4 class="product-price">{{$col2->p_price}}<del class="product-old-price">$990.00</del></h4>
 													</div>
 												</div>
@@ -285,7 +285,7 @@
 													</div>
 													<div class="product-body">
 														<p class="product-category">Category</p>
-														<h3 class="product-name"><a href="#">{{$col2->p_name}}</a></h3>
+														<h3 class="product-name"><a href="/wrist-watch/{{$col2->id}}}">{{$col2->p_name}}</a></h3>
 													<h4 class="product-price">{{$col2->p_price}}<del class="product-old-price">$990.00</del></h4>
 													</div>
 												</div>
@@ -318,7 +318,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#">{{$col3->p_name}}</a></h3>
+												<h3 class="product-name"><a href="/wrist-watch/{{$col3->id}}">{{$col3->p_name}}</a></h3>
 											<h4 class="product-price">{{$col3->p_price}}<del class="product-old-price">$990.00</del></h4>
 											</div>
 										</div>
@@ -338,7 +338,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#">{{$col3->p_name}}</a></h3>
+												<h3 class="product-name"><a href="/wrist-watch/{{$col3->id}}">{{$col3->p_name}}</a></h3>
 											<h4 class="product-price">{{$col3->p_price}}<del class="product-old-price">$990.00</del></h4>
 											</div>
 										</div>

@@ -1,1 +1,1 @@
-This is a client work on an ecommerce website that i built
+This is an ecommerce website that is suppose to serve the brand Pluto
