@@ -45,11 +45,11 @@
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
 								<h3 class="footer-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+								<p>Finesse All in TimePiece</p>
 								<ul class="footer-links">
-									<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-									<li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-									<li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+									<li><a href="#"><i class="fa fa-map-marker"></i>Surulere</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i>+234-814-238-1323</a></li>
+									<li><a href="#"><i class="fa fa-envelope-o"></i>Pluto@email.com</a></li>
 								</ul>
 							</div>
 						</div>
@@ -59,10 +59,9 @@
 								<h3 class="footer-title">Categories</h3>
 								<ul class="footer-links">
 									<li><a href="#">Hot deals</a></li>
-									<li><a href="#">Laptops</a></li>
-									<li><a href="#">Smartphones</a></li>
-									<li><a href="#">Cameras</a></li>
-									<li><a href="#">Accessories</a></li>
+									<li><a href="#">Wrist-Watch</a></li>
+									<li><a href="#">Jacket</a></li>
+									
 								</ul>
 							</div>
 						</div>
@@ -90,7 +89,7 @@
 									<li><a href="#">View Cart</a></li>
 									<li><a href="#">Wishlist</a></li>
 									<li><a href="#">Track My Order</a></li>
-									<li><a href="#">Help</a></li>
+									<li><a href="#">F&Q</a></li>
 								</ul>
 							</div>
 						</div>
@@ -130,12 +129,12 @@
 		<!-- /FOOTER -->
 
 		<!-- jQuery Plugins -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/slick.min.js"></script>
-		<script src="js/nouislider.min.js"></script>
-		<script src="js/jquery.zoom.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="{{asset('/js/jquery.min.js')}}"></script>
+		<script src="{{asset('/js/bootstrap.min.js')}}"></script>
+		<script src="{{asset('/js/slick.min.js')}}"></script>
+		<script src="{{asset('/js/nouislider.min.js')}}"></script>
+		<script src="{{asset('/js/jquery.zoom.min.js')}}"></script>
+		<script src="{{asset('/js/main.js')}}"></script>
 
 	</body>
 </html>

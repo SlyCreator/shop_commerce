@@ -10,34 +10,49 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index(){
-        $rand_products = Product::inRandomOrder()->take(8)->get();
-       // $products_desc =$this->productsDesc();
-       // $products_asc  =$this->productsAsc();
+        $rand_products = $this->fetch_at_Random(6);
+        $products_asc  =$this->products_in_asc(3);
+        $products_desc =$this->products_in_desc(3);
 
                 /*Random archieve*/
-        $products_desc =Product::orderBy('p_name','desc')->take(3)->get();
-        $products_asc  =Product::orderBy('p_name','asc')->take(3)->get();
-        $col1_products = Product::inRandomOrder()->take(3)->get();
-        $col2_products = Product::inRandomOrder()->take(3)->get();
-        $col3_products = Product::inRandomOrder()->take(3)->get();
+        $col1_products =$this->fetch_at_Random(3);
+        $col2_products =$this->fetch_at_Random(3);
+        $col3_products =$this->fetch_at_Random(3);
 
       
         return view('index')->with(compact('rand_products','products_desc','products_asc','col1_products','col2_products','col3_products'));
         //return view('index',['products'=>$products]);
     }
-    /*here is actually a function that does same work with random
-    public function productsDesc(){
-        $products = Product::orderBy('p_name','desc')->get();
-        return $products;
-    }
 
-    public function productsAsc(){
-        $products = Product::orderBy('p_name','asc')->get();
-        return $products;
-    }
-    */
     public function listbycategory(){
         $category_products = Product::inRandomOrder()->where('categories_id','1')->take(12)->get();
             return view('store')->with(compact('category_products'));
     }
+
+    public function productdetail($id){
+        $product_detail = Product::findOrFail($id);
+        $rand_products1 = $this->fetch_at_Random(2);
+        $rand_products2 = $this->fetch_at_Random(2);
+            //return $product_detail;
+            return view('product')->with(compact('product_detail','rand_products1','rand_products2'));
+    }
+    /*here is actually a function that does same work with random*/
+
+    public function products_in_asc($amount){
+        $products = Product::orderBy('p_name','asc')->take($amount)->get();
+        return $products;
+    }
+
+    public function products_in_desc($amount){
+        $products = Product::orderBy('p_name','desc')->take($amount)->get();
+        return $products;
+    }
+
+    public function fetch_at_Random($amount){
+        $products = Product::inRandomOrder()->take($amount)->get();
+        return $products;
+    }
+
+   
+  
 }
