@@ -75,6 +75,15 @@
 
 					<!-- Product details -->
 					<div class="col-md-5">
+						
+					<form action="{{route('addToCart')}}" method="post" role=form>
+						<input type="hidden" name="_token" value="{{csrf_token()}}">
+					<input type="hidden" name="p_id" value="{{$product_detail->id}}">
+					<input type="hidden" name="p_name" value="{{$product_detail->p_name}}">
+					<input type="hidden" name="p_price" value="{{$product_detail->p_price}}">
+					<input type="hidden" name="p_size" value="{{$product_detail->p_size}}">
+					<input type="hidden" name="p_color" value="{{$product_detail->p_color}}">
+
 						<div class="product-details">
 						<h2 class="product-name">{{$product_detail->p_name}}</h2>
 							<div>
@@ -85,7 +94,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-o"></i>
 								</div>
-								<a class="review-link" href="#">10 Review(s) | Add your review</a>
+								<a class="review-link" href="#">3 Review(s) | Add your review</a>
 							</div>
 							<div>
 								<h3 class="product-price">{{$product_detail->p_price}} <del class="product-old-price">$990.00</del></h3>
@@ -93,6 +102,7 @@
 							</div>
 							<p>{{$product_detail->p_description}}.</p>
 
+							@if($product_detail->categories_id != 1)
 							<div class="product-options">
 								<label>
 									Size
@@ -107,12 +117,12 @@
 									</select>
 								</label>
 							</div>
-
+							@endif
 							<div class="add-to-cart">
 								<div class="qty-label">
 									Qty
 									<div class="input-number">
-										<input type="number">
+										<input type="number" value="1" name="p_qty">
 										<span class="qty-up">+</span>
 										<span class="qty-down">-</span>
 									</div>
