@@ -17,8 +17,7 @@ Route::get('/wrist-watch/{id}','IndexController@productdetail');
 
     //handling Cart
 Route::get('/viewcart','CartController@index');
-Route::post('/addtocart','CartController@add');
-Route::get
+Route::post('/addtocart','CartController@addToCart')->name('addToCart');
 
 Route::get('/store', function () {return view('store');});
 
