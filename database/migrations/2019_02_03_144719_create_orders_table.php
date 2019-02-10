@@ -15,13 +15,13 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('session_id')->unsigned();
-            $table->foreign('session_id')->references('id')->on('sessions');
+            //$table->integer('session_id')->unsigned();
+            //$table->foreign('session_id')->references('id')->on('carts');
 
             $table->integer('shipping_id')->unsigned();
             $table->foreign('shipping_id')->references('id')->on('shippings');
 
-            $table->string('order_status');
+            //$table->string('order_status');
             $table->timestamps();
         });
     }
