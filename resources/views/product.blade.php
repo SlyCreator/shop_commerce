@@ -78,11 +78,11 @@
 						
 					   <form action="{{route('addToCart')}}" method="post" role=form>
 							<input type="hidden" name="_token" value="{{csrf_token()}}">
-							<input type="hidden" name="p_id" value="{{$product_detail->id}}">
-							<input type="hidden" name="p_name" value="{{$product_detail->p_name}}">
-							<input type="hidden" name="p_price" value="{{$product_detail->p_price}}">
-							<input type="hidden" name="p_size" value="{{$product_detail->p_size}}">
-							<input type="hidden" name="p_color" value="{{$product_detail->p_color}}">
+							<input type="hidden" name="product_id" value="{{$product_detail->id}}">
+							<input type="hidden" name="product_name" value="{{$product_detail->p_name}}">
+							<input type="hidden" name="price" value="{{$product_detail->p_price}}">
+							<input type="hidden" name="size" value="{{$product_detail->p_size}}">
+							<input type="hidden" name="product_color" value="{{$product_detail->p_color}}">
 
 							<div class="product-details">
 								<h2 class="product-name">{{$product_detail->p_name}}</h2>
@@ -122,7 +122,7 @@
 									<div class="qty-label">
 										Qty
 										<div class="input-number">
-											<input type="number" value="1" name="p_qty">
+											<input type="number" value="1" name="quantity">
 											<span class="qty-up">+</span>
 											<span class="qty-down">-</span>
 										</div>

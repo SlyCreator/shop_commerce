@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Category;
+use App\Cart;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class IndexController extends Controller
 {
@@ -19,6 +21,10 @@ class IndexController extends Controller
         $col2_products =$this->fetch_at_Random(3);
         $col3_products =$this->fetch_at_Random(3);
 
+                    //fecth the cart
+       $session_id=Session::get('session_id');
+        $cart = Cart::where('session_id',$session_id)->select("quantity")->first();
+        
       
         return view('index')->with(compact('rand_products','products_desc','products_asc','col1_products','col2_products','col3_products'));
         //return view('index',['products'=>$products]);

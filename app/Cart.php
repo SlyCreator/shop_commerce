@@ -6,13 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    protected $table ='carts';
+    protected $table='carts';
     protected $primaryKey='id';
-    protected $fillable = [
-        '_token' =>'session_id',
+    protected $fillable=[
         'product_id',
-        'quantity',
+        'product_color',
         'size',
-        'color'
-    ] ;
+        'price',
+        'quantity',
+        'session_id'
+       
+    ];
+ 
 }
