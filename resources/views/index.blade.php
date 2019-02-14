@@ -93,12 +93,12 @@
 											<div class="product">
 												 <form action="{{route('addToCart')}}" method="post" role=form>
 													<input type="hidden" name="_token" value="{{csrf_token()}}">
-													<input type="hidden" name="p_id" value="{{$product->id}}">
-													<input type="hidden" name="p_name" value="{{$product->p_name}}">
-													<input type="hidden" name="p_price" value="{{$product->p_price}}">
-													<input type="hidden" name="p_size" value="{{$product->p_size}}">
-													<input type="hidden" name="p_color" value="{{$product->p_color}}">
-													<input type="hidden" name="p_qty" value="1">
+													<input type="hidden" name="product_id" value="{{$product->id}}">
+													<input type="hidden" name="product_name" value="{{$product->p_name}}">
+													<input type="hidden" name="price" value="{{$product->p_price}}">
+													<input type="hidden" name="size" value="{{$product->p_size}}">
+													<input type="hidden" name="product_color" value="{{$product->p_color}}">
+													<input type="hidden" name="quantity" value="1">
 
 												<div class="product-img">
 													

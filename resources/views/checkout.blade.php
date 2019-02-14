@@ -63,10 +63,10 @@
 										<input type="checkbox" id="create-account">
 										<label for="create-account">
 											<span></span>
-											Create Account?
+											Track My Order and Receive reward?
 										</label>
 										<div class="caption">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+											<p>Choose a Password so you can track Your order from anywhere as well as recieve bonus for shopping with us</p>
 											<input class="input" type="password" name="password" placeholder="Enter Your Password">
 										</div>
 									</div>

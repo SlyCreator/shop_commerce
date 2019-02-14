@@ -15,15 +15,12 @@ class CreateCartsTable extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('session_id');
-
-            $table->integer('product_id')->unsigned();
-            $table->foreign('product_id')->references('id')->on('products');
-
-            
-            $table->integer('quantity');
-            $table->string('size');
-            $table->string('color');          
+            $table->integer('product_id')->nullable();
+            $table->string('product_color')->nullable();
+            $table->string('size')->nullable();
+            $table->float('price')->nullable();
+            $table->integer('quantity')->nullable();
+            $table->string('session_id')->nullable();
             $table->timestamps();
         });
     }
@@ -38,4 +35,3 @@ class CreateCartsTable extends Migration
         Schema::dropIfExists('carts');
     }
 }
-
