@@ -104,7 +104,7 @@
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Your Cart</span>
-									<div class="qty">20</div>
+									<div class="qty">{{$cart->quantity}}</div>
 									</a>
 									<div class="cart-dropdown">
 										<div class="cart-list">

@@ -24,9 +24,9 @@ class IndexController extends Controller
                     //fecth the cart
        $session_id=Session::get('session_id');
         $cart = Cart::where('session_id',$session_id)->select("quantity")->first();
-        
       
-        return view('index')->with(compact('rand_products','products_desc','products_asc','col1_products','col2_products','col3_products'));
+      
+        return view('index')->with(compact('rand_products','products_desc','products_asc','col1_products','col2_products','col3_products','cart'));
         //return view('index',['products'=>$products]);
     }
 
