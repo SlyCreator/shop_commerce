@@ -12,13 +12,15 @@ class CartController extends Controller
 {
     public function index(){
         $session_id=Session::get('session_id');
-        $aa1 = Cart::where('session_id',$session_id)->get();
+        $cart_items = Cart::where('session_id',$session_id)->get();
        $total_qty=0;
-       foreach ($aa1 as $aa){
+
+       return view('viewcart')->with(compact('cart_items'));
+       /*foreach ($aa1 as $aa){
         echo $aa .'</br>';
            //$total_qty +=
        }
-       // dd($aa1);
+       // dd($aa1);*/
 
     }
 

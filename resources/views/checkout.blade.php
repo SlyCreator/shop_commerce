@@ -133,18 +133,19 @@
 									<div><strong>TOTAL</strong></div>
 								</div>
 								<div class="order-products">
+									@foreach ($cart_items as $product)
+										
+									
 									<div class="order-col">
-										<div>1x Product Name Goes Here</div>
-										<div>$980.00</div>
+										<div>1x {{$product->product_id}}</div>
+										<div>{{$total_price+=$product->price*$product->quantity}}</div>
 									</div>
-									<div class="order-col">
-										<div>2x Product Name Goes Here</div>
-										<div>$980.00</div>
-									</div>
+								
+									@endforeach
 								</div>
 								<div class="order-col">
 									<div>Shiping</div>
-									<div><strong>FREE</strong></div>
+									<div><strong>400</strong></div>
 								</div>
 								<div class="order-col">
 									<div><strong>TOTAL</strong></div>
