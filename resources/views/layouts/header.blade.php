@@ -63,8 +63,9 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
-									<img src="./img/logo.png" alt="">
+								<a href="{{route('home')}}" class="logo">
+										
+									<img src="{{asset('/img/logo.png')}}" alt="">
 								</a>
 							</div>
 						</div>
@@ -104,7 +105,7 @@
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Your Cart</span>
-									<div class="qty">{{$cart->quantity}}</div>
+									<div class="qty">2</div>
 									</a>
 									<div class="cart-dropdown">
 										<div class="cart-list">
@@ -135,7 +136,7 @@
 											<h5>SUBTOTAL: $2940.00</h5>
 										</div>
 										<div class="cart-btns">
-											<a href="#">View Cart</a>
+											<a href="{{route('viewcart')}}">View Cart</a>
 											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
