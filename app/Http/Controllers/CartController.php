@@ -16,11 +16,7 @@ class CartController extends Controller
        $total_qty=0;
 
        return view('viewcart')->with(compact('cart_items'));
-       /*foreach ($aa1 as $aa){
-        echo $aa .'</br>';
-           //$total_qty +=
-       }
-       // dd($aa1);*/
+       
 
     }
 
