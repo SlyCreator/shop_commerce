@@ -47,13 +47,19 @@
                                 @endif
                                 <td>{{$product->quantity}}</td>
                                 <td>{{$product->price}}</td>
-                                <td><button class="btn btn-danger">x</button></td>
+                                
+                                <td><a class="btn btn-danger" href="/removeItem/{{$product->id}}">x</a></td>
                                
                             </tr>
                         </tbody>
                         @endforeach
                        
                     </table>
+                    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
                     <button class="btn btn-warning">Continue Checkout</button>
                 </div>
                  <!--cart Table-->

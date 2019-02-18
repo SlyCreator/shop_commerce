@@ -68,4 +68,11 @@ class CartController extends Controller
     public function updateCart($id,$quantity){
         
     }
+
+    public function removeItem($id){
+        $delete_item=Cart::findOrFail($id);
+        $delete_item->delete();
+        return back()->with('message','item removed successfully');
+    }
+    
 }
