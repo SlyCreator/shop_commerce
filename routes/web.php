@@ -18,7 +18,8 @@ Route::get('/wrist-watch/{id}','IndexController@productdetail');
     //handling Cart
 Route::get('/viewcart','CartController@index')->name('viewcart');
 Route::post('/addtocart','CartController@addToCart')->name('addToCart');
-Route::get('/removeItem/{id}','CartController@removeItem')->name('removeItem');
+Route::get('cart/removeItem/{id}','CartController@removeItem')->name('removeItem');
+Route::get('cart/update-quantity/{id}/{qty}','CartController@updateQuantity');
 
 Route::get('/store', function () {return view('store');});
 

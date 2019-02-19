@@ -45,10 +45,16 @@
                                 @else
                                     <td>{{$product->size}}</td>
                                 @endif
-                                <td>{{$product->quantity}}</td>
+                                <td>
+                                        <a class="cart_quantity_up" href="{{url('/cart/update-quantity/'.$product->product_id.'/1')}}"> + </a>
+                                    <input type="text" value="{{$product->quantity}}" size="2">
+                                    @if($product->quantity>1)
+                                    <a class="cart_quantity_up" href="{{url('/cart/update-quantity/'.$product->product_id.'/-1')}}"> - </a>
+                                    @endif
+                                </td>
                                 <td>{{$product->price}}</td>
                                 
-                                <td><a class="btn btn-danger" href="/removeItem/{{$product->id}}">x</a></td>
+                                <td><a class="btn btn-danger" href="cart/removeItem/{{$product->id}}">x</a></td>
                                
                             </tr>
                         </tbody>
