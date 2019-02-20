@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Cart;
 use App\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Db;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
@@ -15,7 +15,7 @@ class CartController extends Controller
         $cart_items = Cart::where('session_id',$session_id)->get();
        $total_qty=0;
 
-       return view('viewcart')->with(compact('cart_items'));
+       return view('cart')->with(compact('cart_items'));
        
 
     }
@@ -65,8 +65,14 @@ class CartController extends Controller
         }
     }
 
-    public function updateCart($id,$quantity){
-        
+    public function updateCart($id,$qty){
+        //check if the amount needed is available
+        $update_qty = Cart::where(['product_id'=>$id]);
+             echo $update_qty->quantity;
+
+   
+            //return back()->with('message','Stock is not availble');
+
     }
 
     public function removeItem($id){
