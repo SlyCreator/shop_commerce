@@ -21,6 +21,12 @@ Route::post('/addtocart','CartController@addToCart')->name('addToCart');
 Route::get('cart/removeItem/{id}','CartController@removeItem')->name('removeItem');
 Route::get('cart/update-quantity/{id}/{qty}','CartController@updateCart');
 
+    //Handling Order
+Route::get('placeOrder','OrderController@checkout_page')->name('Checkoutpage');
+
+
+    //Testing views
+
 Route::get('/store', function () {return view('store');});
 
 Route::get('/product', function () {return view('product');});

@@ -20,4 +20,14 @@ class Product extends Model
     protected function category(){
         return $this->belongsTo('App\Category');
     }
+
+    protected function carts(){
+        return $this->belongsTo('App\Cart');
+    }
+
+    public static function getProductName($id)
+    {
+        $product_name= Product::where('id',$id)->first();
+        return $product_name->p_name;
+    }
 }

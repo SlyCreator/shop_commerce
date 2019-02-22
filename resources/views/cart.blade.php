@@ -1,3 +1,4 @@
+<?php use \App\Product; ?>
 @extends('layouts.layout')
 
 @section('content')
@@ -31,10 +32,10 @@
                                 <th>action</th>
                             </tr>
                         </thead>
-                        @foreach ($cart_items as $product)
+                        @foreach ($cart as $product)
                         <tbody>
                             <tr> 
-                                <td>{{$product->product_id}}</td>
+                                <td>{{Product::getProductName($product->product_id)}}</td>
                                 @if($product->product_color == NULL)
                                 <td>default</td>
                                 @else
@@ -66,7 +67,7 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-                    <button class="btn btn-warning">Continue Checkout</button>
+                    <a href="{{route('Checkoutpage')}}" class="btn btn-warning">Continue Checkout</a>
                 </div>
                  <!--cart Table-->
 			</div>

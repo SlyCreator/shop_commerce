@@ -1,3 +1,4 @@
+<?php use \App\Product; ?>
 @extends('layouts.layout')
 
 @section('content')
@@ -133,23 +134,23 @@
 									<div><strong>TOTAL</strong></div>
 								</div>
 								<div class="order-products">
-									@foreach ($cart_items as $product)
+									@foreach ($cart as $product)
 										
 									
 									<div class="order-col">
-										<div>1x {{$product->product_id}}</div>
-										<div>{{$total_price+=$product->price*$product->quantity}}</div>
+										<div>{{$product->quantity}} x {{Product::getProductName($product->product_id)}}</div>
+										<div><strong>{{$total_price=$product->price*$product->quantity}}</strong></div>
 									</div>
 								
 									@endforeach
 								</div>
 								<div class="order-col">
 									<div>Shiping</div>
-									<div><strong>400</strong></div>
+									<div><strong>350</strong></div>
 								</div>
 								<div class="order-col">
 									<div><strong>TOTAL</strong></div>
-									<div><strong class="order-total">$2940.00</strong></div>
+									<div><strong class="order-total">#2940.00</strong></div>
 								</div>
 							</div>
 							<div class="payment-method">

@@ -12,10 +12,11 @@ class CartController extends Controller
 {
     public function index(){
         $session_id=Session::get('session_id');
-        $cart_items = Cart::where('session_id',$session_id)->get();
-       $total_qty=0;
+        $cart = Cart::where('session_id',$session_id)->get();
 
-       return view('cart')->with(compact('cart_items'));
+      // $total_qty=0;
+
+    return view('cart')->with(compact('cart'));
        
 
     }
@@ -81,4 +82,9 @@ class CartController extends Controller
         return back()->with('message','item removed successfully');
     }
     
+    public static function getProductName($id)
+    {
+        $product_name= Product::where('id',$id)->first();
+        return $product_name->p_name;
+    }
 }
